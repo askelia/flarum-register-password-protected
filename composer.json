@@ -1,0 +1,58 @@
+{
+    "name": "askelia/flarum-register-password-protected",
+    "description": "Require a password on registration form to keep your forum private",
+    "keywords": [
+        "flarum"
+    ],
+    "type": "flarum-extension",
+    "license": "GPL-3.0-or-later",
+    "require": {
+        "flarum/core": "^1.0.0"
+    },
+    "require-dev": {
+        "flarum/testing": "^1.0.0"
+    },
+    "authors": [
+        {
+            "name": "Emmanuel Bruno",
+            "email": "info@askelia.com",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Askelia\\FlarumRegisterPasswordProtected\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Askelia\\FlarumRegisterPasswordProtected\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Password Protected Registration",
+            "category": "",
+            "icon": {
+                "name": "",
+                "backgroundColor": "",
+                "color": ""
+            }
+        }
+    },
+    "scripts": {
+        "test": [
+            "@test:unit",
+            "@test:integration"
+        ],
+        "test:unit": "phpunit -c tests/phpunit.unit.xml",
+        "test:integration": "phpunit -c tests/phpunit.integration.xml",
+        "test:setup": "@php tests/integration/setup.php"
+    },
+    "scripts-descriptions": {
+        "test": "Runs all tests.",
+        "test:unit": "Runs all unit tests.",
+        "test:integration": "Runs all integration tests.",
+        "test:setup": "Sets up a database for use with integration tests. Execute this only once."
+    }
+}
