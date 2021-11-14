@@ -6,4 +6,4 @@ askelia-register-password-protected:
 
   forum:
     sign_up: 
-        key_placeholder: Secret Key
+        key_placeholder: Clé secrète

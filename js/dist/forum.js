@@ -110,20 +110,29 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var flarum_forum_components_HeaderPrimary_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! flarum/forum/components/HeaderPrimary.js */ "flarum/forum/components/HeaderPrimary.js");
-/* harmony import */ var flarum_forum_components_HeaderPrimary_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(flarum_forum_components_HeaderPrimary_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var flarum_common_extend__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! flarum/common/extend */ "flarum/common/extend");
-/* harmony import */ var flarum_common_extend__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(flarum_common_extend__WEBPACK_IMPORTED_MODULE_1__);
- //SignUpModal.js';
+/* harmony import */ var flarum_common_extend__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! flarum/common/extend */ "flarum/common/extend");
+/* harmony import */ var flarum_common_extend__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(flarum_common_extend__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var flarum_forum_components_SignUpModal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! flarum/forum/components/SignUpModal */ "flarum/forum/components/SignUpModal");
+/* harmony import */ var flarum_forum_components_SignUpModal__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(flarum_forum_components_SignUpModal__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var flarum_common_utils_extractText__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! flarum/common/utils/extractText */ "flarum/common/utils/extractText");
+/* harmony import */ var flarum_common_utils_extractText__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(flarum_common_utils_extractText__WEBPACK_IMPORTED_MODULE_2__);
+
 
 
 app.initializers.add('askelia/flarum-register-password-protected', function () {
   console.log('[askelia/flarum-register-password-protected] Hello, forum!');
-});
-Object(flarum_common_extend__WEBPACK_IMPORTED_MODULE_1__["extend"])(flarum_forum_components_HeaderPrimary_js__WEBPACK_IMPORTED_MODULE_0__["SignUpModal"].prototype, 'items', function (items) {
-  items.add('key', m("div", null, "Key", m("input", {
-    type: "password"
-  })));
+  Object(flarum_common_extend__WEBPACK_IMPORTED_MODULE_0__["extend"])(flarum_forum_components_SignUpModal__WEBPACK_IMPORTED_MODULE_1___default.a.prototype, 'fields', function (items) {
+    items.add('key', m("div", {
+      className: "Form-group"
+    }, m("input", {
+      className: "FormControl",
+      name: "key",
+      type: "password",
+      placeholder: flarum_common_utils_extractText__WEBPACK_IMPORTED_MODULE_2___default()(app.translator.trans('askelia-register-password-protected.forum.sign_up.key_placeholder')),
+      bidi: this.key,
+      disabled: this.loading
+    })));
+  });
 });
 
 /***/ }),
@@ -139,14 +148,25 @@ module.exports = flarum.core.compat['common/extend'];
 
 /***/ }),
 
-/***/ "flarum/forum/components/HeaderPrimary.js":
-/*!**************************************************************************!*\
-  !*** external "flarum.core.compat['forum/components/HeaderPrimary.js']" ***!
-  \**************************************************************************/
+/***/ "flarum/common/utils/extractText":
+/*!*****************************************************************!*\
+  !*** external "flarum.core.compat['common/utils/extractText']" ***!
+  \*****************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = flarum.core.compat['forum/components/HeaderPrimary.js'];
+module.exports = flarum.core.compat['common/utils/extractText'];
+
+/***/ }),
+
+/***/ "flarum/forum/components/SignUpModal":
+/*!*********************************************************************!*\
+  !*** external "flarum.core.compat['forum/components/SignUpModal']" ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = flarum.core.compat['forum/components/SignUpModal'];
 
 /***/ })
 
